@@ -1,33 +1,24 @@
 <template>
-  <v-card color="grey lighten-4" flat height="200px" tile>
-    <v-toolbar dense>
+  <v-app>
+    <v-app-bar app color="primary" dark>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Title</v-toolbar-title>
-
+      <v-toolbar-title>マイアドレス帳</v-toolbar-title>
       <v-spacer></v-spacer>
+    </v-app-bar>
 
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
-    </v-toolbar>
-  </v-card>
+    <v-content>
+      <SideNav />
+    </v-content>
+  </v-app>
 </template>
 
 <script>
+import SideNav from "./components/SideNav";
 export default {
   name: "App",
-
-  components: {},
-
+  components: {
+    SideNav,
+  },
   data: () => ({
     //
   }),
